@@ -1,5 +1,5 @@
-// Thu Jun 22 20:49:39 UTC 2017
-// 4735-a0p-04-
+// Sat Jul 29 18:14:02 UTC 2017
+// 4735-b0b-01-
 
 #include <Arduino.h>
 #include "../../yaffa.h"
@@ -14,3 +14,12 @@ void _help(void) {
   Serial.print("    type 'words' instead of 'help'.\r\n");
 }
 
+const char who_str[] = "who";
+void _who(void) {
+  // hex 1d00 dup 40 dump
+  // _hex();
+  dStack_push(0x1d00);
+  _dupe();
+  dStack_push(0x40);
+  _dump();
+}
