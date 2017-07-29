@@ -16,10 +16,10 @@ void _help(void) {
 
 const char who_str[] = "who";
 void _who(void) {
-  // hex 1d00 dup 40 dump
+  // hex 1d10 dup 48 dump
   // _hex();
-  dStack_push(0x1d00);
+  dStack_push(0x1d10); // nothing sacred, experiment!  YMMV.
   _dupe();
-  dStack_push(0x40);
+  dStack_push(0x50);
   _dump();
 }
